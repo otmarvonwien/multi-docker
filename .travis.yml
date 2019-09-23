@@ -21,7 +21,7 @@ after_success:
   - docker push otmarvonwien/multi-server
   - docker push otmarvonwien/multi-worker
 
-delpoy:
+deploy:
   provider: elasticbeanstalk
   region: eu-west-1
   app: multi-docker
