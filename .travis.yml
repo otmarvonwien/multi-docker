@@ -13,6 +13,7 @@ after_success:
   - docker build -t otmarvonwien/multi-nginx ./nginx
   - docker build -t otmarvonwien/multi-server ./server
   - docker build -t otmarvonwien/multi-worker ./worker
+  - docker images
 
 deploy:
   skip_cleanup: true
