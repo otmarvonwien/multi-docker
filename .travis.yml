@@ -16,13 +16,6 @@ after_success:
 
 deploy:
   provider: script
-  script:
-    # Log in to the docker CLI
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    # Take those images and push them to docker hub
-    - docker push otmarvonwien/multi-client
-    - docker push otmarvonwien/multi-nginx
-    - docker push otmarvonwien/multi-server
-    - docker push otmarvonwien/mutli-worker
+  script: bash docker_push
   on:
     branch: master
