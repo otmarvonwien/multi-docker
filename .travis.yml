@@ -15,8 +15,7 @@ after_success:
   - docker build -t otmarvonwien/multi-worker ./worker
 
 deploy:
-  skip-cleanup: true
   provider: script
-  script: sh ./docker_push
+  script: bash ./docker_push.sh
   on:
     branch: master
