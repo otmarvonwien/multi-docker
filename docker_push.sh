@@ -5,4 +5,4 @@ echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 docker push otmarvonwien/multi-client
 docker push otmarvonwien/multi-nginx
 docker push otmarvonwien/multi-server
-docker push otmarvonwien/mutli-worker
+docker push otmarvonwien/multi-worker
