@@ -8,9 +8,14 @@ before_install:
 script:
   - docker run -e CI=true otmarvonwien/react-test npm test
 
-#after_success:
+after_success:
+  - docker build -t otmarvonwien/multi-client ./client
+  - docker build -t otmarvonwien/multi-nginx ./nginx
+  - docker build -t otmarvonwien/multi-server ./server
+  - docker build -t otmarvonwien/multi-worker ./worker
 
 deploy:
+  skip-cleanup: true
   provider: script
   script: bash docker_push
   on:
