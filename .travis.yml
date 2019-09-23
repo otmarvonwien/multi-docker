@@ -21,16 +21,16 @@ after_success:
   - docker push otmarvonwien/multi-server
   - docker push otmarvonwien/multi-worker
 
-  delpoy:
-    provider: elasticbeanstalk
-    region: eu-west-1
-    app: multi-docker
-    env: MultiDocker-env
-    bucket_name: elasticbeanstalk-eu-west-1-939268298574
-    bucket_path: docker-multi
-    on:
-      branch: master
-    access_key_id: 
-      secure: $AWS_ACCESS_KEY
-    secret_access_key:
-      secure: $AWS_SECRET_KEY
+delpoy:
+  provider: elasticbeanstalk
+  region: eu-west-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-eu-west-1-939268298574
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: 
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
